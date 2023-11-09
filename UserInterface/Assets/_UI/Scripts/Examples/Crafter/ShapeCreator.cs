@@ -1,5 +1,7 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UI.Panels;
+using UI.Switchers.ColorChanger;
 using UnityEngine;
 using UnityEngine.UI;
 using Color = UnityEngine.Color;
@@ -54,6 +56,27 @@ namespace UI.Example
                 2 => _sphere,
                 _ => _cube
             };
+        }
+
+        private void OnValidate()
+        {
+            var images = GetComponentsInChildren<Image>();
+            var texts = GetComponentsInChildren<TextMeshProUGUI>();
+            foreach (var image in images)
+            {
+                if (image.TryGetComponent<ImageColorChanger>(out _) == false)
+                {
+                    image.gameObject.AddComponent<ImageColorChanger>();
+                }
+            }
+
+            foreach (var text in texts)
+            {
+                if (text.gameObject.TryGetComponent<TextColorChanger>(out _) == false)
+                {
+                    text.gameObject.AddComponent<ImageColorChanger>();
+                }
+            }
         }
     }
 }
