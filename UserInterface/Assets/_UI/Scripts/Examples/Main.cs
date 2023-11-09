@@ -7,7 +7,7 @@ namespace UI.Example
     {
         [SerializeField] private ShapeCreator _shapeCreator;
         [SerializeField] private YesNoQuestionnaire _yesNoQuestionnaire;
-
+        [SerializeField] private Vector3 _pos;
         private GameObject _gameObject;
         public void Start()
         {
@@ -28,7 +28,7 @@ namespace UI.Example
                 Destroy(_gameObject);
             }
             Debug.Log(shapeData.Name);
-            _gameObject = Instantiate(shapeData.Figure, Vector3.zero, Quaternion.identity);
+            _gameObject = Instantiate(shapeData.Figure, _pos, Quaternion.identity);
             _gameObject.GetComponent<MeshRenderer>().material.color = shapeData.Color;
             _gameObject.name = shapeData.Name;
         }

@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 872445063070314997, guid: 572b18f5899b33247b4d38b3817d44d6, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 872445063070314997, guid: 572b18f5899b33247b4d38b3817d44d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 872445063070314997, guid: 572b18f5899b33247b4d38b3817d44d6, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1500290402093616613, guid: 572b18f5899b33247b4d38b3817d44d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -37,11 +49,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1500290402093616613, guid: 572b18f5899b33247b4d38b3817d44d6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 706.3907
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1500290402093616613, guid: 572b18f5899b33247b4d38b3817d44d6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 309.8832
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1500290402093616613, guid: 572b18f5899b33247b4d38b3817d44d6, type: 3}
       propertyPath: m_LocalPosition.x
