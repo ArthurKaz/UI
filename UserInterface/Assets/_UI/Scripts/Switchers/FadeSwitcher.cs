@@ -5,7 +5,7 @@ using UI.Abstraction;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Animations
+namespace UI.Switchers
 {
     public class FadeSwitcher : MonoBehaviour, IUISwitcher, IInactiveStart
     {

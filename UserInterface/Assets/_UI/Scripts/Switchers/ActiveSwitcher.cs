@@ -1,7 +1,7 @@
 ﻿using UI.Abstraction;
 using UnityEngine;
 
-namespace UI.Animations
+namespace UI.Switchers
 {
     public class ActiveSwitcher : MonoBehaviour, IUISwitcher
     {
