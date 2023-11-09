@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Color = UnityEngine.Color ;
 
-namespace UI.Panels.Crafter
+namespace UI.Example
 {
     public class ShapeData
     {

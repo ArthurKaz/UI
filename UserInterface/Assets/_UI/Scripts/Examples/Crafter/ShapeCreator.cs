@@ -1,12 +1,12 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
+using UI.Panels;
 using UnityEngine;
 using UnityEngine.UI;
 using Color = UnityEngine.Color;
 
-namespace UI.Panels.Crafter
+namespace UI.Example
 {
-    public class ShapeCreator : ObjectCreationPanel<ShapeData>
+    public sealed class ShapeCreator : ObjectCreationPanel<ShapeData>
     {
         [SerializeField] private TMP_Dropdown _color;
         [SerializeField] private TMP_Dropdown _figure;

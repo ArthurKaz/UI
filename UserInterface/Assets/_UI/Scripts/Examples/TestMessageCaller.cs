@@ -1,8 +1,9 @@
 ﻿using System;
+using UI.Buttons;
 using UI.Panels;
 using UnityEngine;
 
-namespace UI.Buttons
+namespace UI.Example
 {
     [Serializable]
     public class TestMessageCaller : ButtonClick

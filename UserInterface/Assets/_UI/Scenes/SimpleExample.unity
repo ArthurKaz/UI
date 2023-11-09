@@ -3011,43 +3011,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446953022232838288}
   m_CullTransparentMesh: 1
---- !u!114 &4343633934707628736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5138431704938146856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aa1726487efc3a4c9577d4eb34e3866, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scaleCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  _animationDuration: 0.1
 --- !u!1 &4351483195689212451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3739,7 +3702,7 @@ GameObject:
   - component: {fileID: 6715249851661732219}
   - component: {fileID: 9184372173416375956}
   - component: {fileID: 4399929480666346484}
-  - component: {fileID: 4343633934707628736}
+  - component: {fileID: 9184372173416375957}
   m_Layer: 5
   m_Name: Message
   m_TagString: Untagged
@@ -6095,6 +6058,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 6907085191873719638}
+--- !u!114 &9184372173416375957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138431704938146856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c263d809f421b142bd27cbdc1060a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationDuration: 0.3
+  _spriteRenderers:
+  - {fileID: 6715249851661732219}
+  - {fileID: 5830157056811018009}
+  - {fileID: 5830157056811018009}
+  _textMeshProUguis:
+  - {fileID: 6907085191873719638}
+  - {fileID: 8135797533284256192}
 --- !u!222 &9193052090477359656
 CanvasRenderer:
   m_ObjectHideFlags: 0

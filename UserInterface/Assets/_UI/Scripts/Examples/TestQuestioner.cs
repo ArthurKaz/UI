@@ -1,9 +1,8 @@
 ﻿using UI.Buttons;
 using UI.Panels;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace UI.Scripts.Examples
+namespace UI.Example
 {
     public class TestQuestioner : ButtonClick
     {

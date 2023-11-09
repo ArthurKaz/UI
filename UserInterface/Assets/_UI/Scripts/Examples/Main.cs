@@ -1,9 +1,9 @@
-﻿using UI.Abstraction;
+﻿using UI.Panels;
 using UnityEngine;
 
-namespace UI.Panels.Crafter
+namespace UI.Example
 {
-    public class Main : MonoBehaviour
+    public sealed class Main : MonoBehaviour
     {
         [SerializeField] private ShapeCreator _shapeCreator;
         [SerializeField] private YesNoQuestionnaire _yesNoQuestionnaire;
