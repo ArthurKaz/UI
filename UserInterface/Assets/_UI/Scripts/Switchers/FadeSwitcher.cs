@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UI.Abstraction;
+using UI.Switchers.ColorChanger;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +11,13 @@ namespace UI.Switchers
     public class FadeSwitcher : MonoBehaviour, IUISwitcher, IInactiveStart
     {
         [SerializeField] private float _animationDuration;
-        private ObjectsForFade _objectsForFade;
+        private IColorChanger[] _objectsForFade;
+
         public void InactiveStart()
         {
-            _objectsForFade = new ObjectsForFade(gameObject);
+            _objectsForFade = GetComponentsInChildren<IColorChanger>();
         }
-        
+
         public void Disappear()
         {
             StartCoroutine(PlayAnimation(true));
@@ -26,7 +28,7 @@ namespace UI.Switchers
             gameObject.SetActive(true);
             StartCoroutine(PlayAnimation());
         }
-        
+
         private IEnumerator PlayAnimation(bool hiding = false)
         {
             float time = 0;
@@ -39,45 +41,23 @@ namespace UI.Switchers
                 {
                     percentageComplete = 1 - percentageComplete;
                 }
-                _objectsForFade.ChangeAlpha(percentageComplete);
+
+                ChangeAlpha(percentageComplete);
 
                 yield return null;
             }
+
             if (hiding)
             {
                 gameObject.SetActive(false);
             }
         }
-        
-        private sealed class ObjectsForFade
+
+        private void ChangeAlpha(float percent)
         {
-            private readonly List<Image> _images  = new();
-            private readonly List<TextMeshProUGUI> _textMeshProUIs = new();
-
-            public ObjectsForFade(GameObject root)
+            foreach (var objects in _objectsForFade)
             {
-                var images = root.GetComponentsInChildren<Image>();
-                var texts =  root.GetComponentsInChildren<TextMeshProUGUI>();
-                _images.AddRange(images);
-                _textMeshProUIs.AddRange(texts);
-                
-            }
-            public void ChangeAlpha(float alpha)
-            {
-                alpha = Mathf.Clamp01(alpha);
-                foreach (var image in _images)
-                {
-                    var color = image.color;
-                    color.a = alpha;
-                    image.color = color;
-                }
-
-                foreach (var text in _textMeshProUIs)
-                {
-                    var color = text.color;
-                    color.a = alpha;
-                    text.color = color;
-                }
+                objects.ChangeAlpha(percent);
             }
         }
     }

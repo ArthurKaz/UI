@@ -1,4 +1,6 @@
-﻿using UI.Abstraction;
+﻿using System;
+using UI.Abstraction;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +14,7 @@ namespace UI.Buttons
         {
             if (_button == null && TryGetComponent(out _button) == false)
             {
-                Debug.LogError("The button is null, your method will not be called");
+                Debug.LogError(name + " the button is null, your method will not be called");
             }
             else
             {
@@ -21,5 +23,13 @@ namespace UI.Buttons
         }
 
         public abstract void HandleClick();
+        private void OnValidate()
+        {
+            if (_button == null && TryGetComponent(out Button button))
+            {
+                _button = button;
+            }
+            
+        }
     }
 }
