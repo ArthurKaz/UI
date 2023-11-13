@@ -1,7 +1,5 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UI.Panels;
-using UI.Switchers.ColorChanger;
 using UnityEngine;
 using UnityEngine.UI;
 using Color = UnityEngine.Color;
