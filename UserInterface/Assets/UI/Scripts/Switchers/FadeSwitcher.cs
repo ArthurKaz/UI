@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UI.Abstraction;
 using UI.Switchers.ColorChanger;
@@ -58,6 +57,27 @@ namespace UI.Switchers
             foreach (var objects in _objectsForFade)
             {
                 objects.ChangeAlpha(percent);
+            }
+        }
+        
+        private void OnValidate()
+        {
+            var images = GetComponentsInChildren<Image>();
+            var texts = GetComponentsInChildren<TextMeshProUGUI>();
+            foreach (var image in images)
+            {
+                if (image.TryGetComponent<ImageColorChanger>(out _) == false)
+                {
+                    image.gameObject.AddComponent<ImageColorChanger>();
+                }
+            }
+
+            foreach (var text in texts)
+            {
+                if (text.gameObject.TryGetComponent<TextColorChanger>(out _) == false)
+                {
+                    text.gameObject.AddComponent<ImageColorChanger>();
+                }
             }
         }
     }

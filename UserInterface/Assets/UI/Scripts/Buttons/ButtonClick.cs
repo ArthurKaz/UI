@@ -1,6 +1,4 @@
-﻿using System;
-using UI.Abstraction;
-using Unity.VisualScripting;
+﻿using UI.Abstraction;
 using UnityEngine;
 using UnityEngine.UI;
 

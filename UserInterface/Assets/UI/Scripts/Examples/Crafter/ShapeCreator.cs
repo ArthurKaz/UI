@@ -57,26 +57,5 @@ namespace UI.Example
                 _ => _cube
             };
         }
-
-        private void OnValidate()
-        {
-            var images = GetComponentsInChildren<Image>();
-            var texts = GetComponentsInChildren<TextMeshProUGUI>();
-            foreach (var image in images)
-            {
-                if (image.TryGetComponent<ImageColorChanger>(out _) == false)
-                {
-                    image.gameObject.AddComponent<ImageColorChanger>();
-                }
-            }
-
-            foreach (var text in texts)
-            {
-                if (text.gameObject.TryGetComponent<TextColorChanger>(out _) == false)
-                {
-                    text.gameObject.AddComponent<ImageColorChanger>();
-                }
-            }
-        }
     }
 }
